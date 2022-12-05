@@ -22,9 +22,9 @@ The preprocessing of the feature pipeline takes around half an hour each time, m
 To simplify the data-loading procedure in the training pipeline, we then combined the stored data from the two places, made a folder as its original structure and compressed it. We uploaded the zipped folder (roughly 1.6GB) to KTH OneDrive and obtained a [publicly-accessible link](https://kth-my.sharepoint.com/:u:/g/personal/xinyulia_ug_kth_se/EWiFiRGIjLVOoOvs6aKbetYBms635pOLGO_-hY74mgulxg?e=hxkUgg).
 
 
-
 ## Training Pipeline
 
+In the [training pipeline](https://github.com/Hope-Liang/ID2223Lab2/blob/main/whisper_training_pipeline.ipynb), we 
 
 
 
