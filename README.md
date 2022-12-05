@@ -15,7 +15,7 @@ Whisper is a multilingual pre-trained model for Automatic Speech Recognition (AS
 
 ## Feature Pipeline
 
-The [feature pipeline](https://github.com/Hope-Liang/ID2223Lab2/blob/main/whisper_feature_pipeline.ipynb) is downloaded from Google Colab and only CPU is used when extracting the features. The data is obtained from [Common Voice](https://huggingface.co/datasets/mozilla-foundation/common_voice_11_0) and `Subset = sv-SE` for Swedish language. Irrelavent columns are removed and a feature extractor and a tokenizer are used for extracting the spectrogram features and preprocessing the labels respectively. The feature extractor will first pad/truncate audio samples to 30s long and then convert them to log-Mel spectrograms.
+The [whisper_feature_pipeline.ipynb](https://github.com/Hope-Liang/ID2223Lab2/blob/main/whisper_feature_pipeline.ipynb) is downloaded from Google Colab and only CPU is used when extracting the features. The data is obtained from [Common Voice](https://huggingface.co/datasets/mozilla-foundation/common_voice_11_0) and `Subset = sv-SE` for Swedish language. Irrelavent columns are removed and a feature extractor and a tokenizer are used for extracting the spectrogram features and preprocessing the labels respectively. The feature extractor will first pad/truncate audio samples to 30s long and then convert them to log-Mel spectrograms.
 
 The preprocessing of the feature pipeline takes around half an hour each time, making feature storage essential in our case. However, the generated features are quite huge (roughly 16.7GB) in total, and thus we tested using both Google Drive and Hopsworks for storing the feature data as shown in the code. 
 
@@ -24,7 +24,7 @@ To simplify the data-loading procedure in the training pipeline, we then combine
 
 ## Training Pipeline
 
-In the [training pipeline](https://github.com/Hope-Liang/ID2223Lab2/blob/main/whisper_training_pipeline.ipynb), we utilized free GPU on Colab and downloaded the data from KTH OneDrive with wget command. The data is downloaded and unzipped to Colab local environment, and then read by DatasetDict.load_from_disk function.
+In the [whisper_training_pipeline.ipynb](https://github.com/Hope-Liang/ID2223Lab2/blob/main/whisper_training_pipeline.ipynb) downloaded from Colab, we utilized free GPU on Colab and downloaded the data from KTH OneDrive with wget command. The data is downloaded and unzipped to Colab local environment, and then read by DatasetDict.load_from_disk function.
 
 The data is then processed to replace padded labels with -100 to ignore the loss correctly. Evaluation metric is configured as word error rate (WER) and the pretrained "whisper-small" model is loaded. Our model saves checkpoints to Google Drive (in this case we also have to set `push_to_hub=False`). We trained for 4000 steps and saves the checkpoints every 1000 steps. After the training completes, which took roughly 8 hours in total, we reached a WER of 19.89%.
 
