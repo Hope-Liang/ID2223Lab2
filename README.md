@@ -24,9 +24,9 @@ To simplify the data-loading procedure in the training pipeline, we then combine
 
 ## Training Pipeline
 
-In the [training pipeline](https://github.com/Hope-Liang/ID2223Lab2/blob/main/whisper_training_pipeline.ipynb), we 
+In the [training pipeline](https://github.com/Hope-Liang/ID2223Lab2/blob/main/whisper_training_pipeline.ipynb), we utilized free GPU on Colab and downloaded the data from KTH OneDrive with wget command. The data is downloaded and unzipped to Colab local environment, and then read by DatasetDict.load_from_disk function.
 
-
+The data is then processed to replace padded labels with -100 to ignore the loss correctly. Evaluation metric is configured as word error rate (WER) and the pretrained "whisper-small" model is loaded. Our model saves checkpoints to Google Drive (in this case we also have to set `push_to_hub=False`). We trained for 4000 steps and saves the checkpoints every 1000 steps. After the training completes, which took roughly 8 hours in total, we reached a WER of 19.89%.
 
 
 ## Interactive UI
