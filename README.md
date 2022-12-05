@@ -31,7 +31,7 @@ The data is then processed to replace padded labels with -100 to ignore the loss
 
 ## Interactive UI
 
-
+With the trained model, we uploaded it to [Hugging face Model](https://huggingface.co/khalidey/ID2223_Lab2_Whisper_SV/tree/main) and created a [Hugging face interactive UI](https://huggingface.co/spaces/khalidey/ID2223-Lab2-Whisper). The application design is available in [app.py](https://huggingface.co/spaces/khalidey/ID2223-Lab2-Whisper/blob/main/app.py). Users can click on the Record from microphone button to start speaking in Swedish, and click on Stop recording when finished speaking. After clicking on Submit for around 12 seconds, the spoken words will be shown on the output box to the right.
 
 
 
