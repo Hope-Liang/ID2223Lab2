@@ -17,7 +17,9 @@ Whisper is a multilingual pre-trained model for Automatic Speech Recognition (AS
 
 The [feature pipeline](https://github.com/Hope-Liang/ID2223Lab2/blob/main/whisper_feature_pipeline.ipynb) is downloaded from Google Colab and only CPU is used when extracting the features. The data is obtained from [Common Voice](https://huggingface.co/datasets/mozilla-foundation/common_voice_11_0) and `Subset = sv-SE` for Swedish language. Irrelavent columns are removed and a feature extractor and a tokenizer are used for extracting the spectrogram features and preprocessing the labels respectively. The feature extractor will first pad/truncate audio samples to 30s long and then convert them to log-Mel spectrograms.
 
-The preprocessing of the feature pipeline takes around half an hour each time, making feature storage essential in our case. However, the generated features are quite huge (roughly 16.7GB) in total, and thus we tested using both Google Drive and Hopsworks for storing the feature data. To simplify the data-loading in training pipeline, we then combined the stored data from the two places and compressed it, uploaded to KTH OneDrive with a [publicly-accessible link](https://kth-my.sharepoint.com/:u:/g/personal/xinyulia_ug_kth_se/EWiFiRGIjLVOoOvs6aKbetYBms635pOLGO_-hY74mgulxg?e=hxkUgg).
+The preprocessing of the feature pipeline takes around half an hour each time, making feature storage essential in our case. However, the generated features are quite huge (roughly 16.7GB) in total, and thus we tested using both Google Drive and Hopsworks for storing the feature data as shown in the code. 
+
+To simplify the data-loading procedure in the training pipeline, we then combined the stored data from the two places, made a folder as its original structure and compressed it. We uploaded the zipped folder (roughly 1.6GB) to KTH OneDrive and obtained a [publicly-accessible link](https://kth-my.sharepoint.com/:u:/g/personal/xinyulia_ug_kth_se/EWiFiRGIjLVOoOvs6aKbetYBms635pOLGO_-hY74mgulxg?e=hxkUgg).
 
 
 
