@@ -41,6 +41,8 @@ The link to the Application webpage on Hugging Face is [Interactive UI](https://
 
 ## How to Improve Model Performance
 
+Although we achieved 19.89% WER with our current design, there are still many ways to further improve the model performance. The approaches could be summarized into two kinds, model-centric and data-centric.
+
 ### Model-centric Approaches
 
 
