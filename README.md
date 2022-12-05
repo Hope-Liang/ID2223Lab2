@@ -54,5 +54,5 @@ For model-centric approaches, we can
 
 ### Data-centric Approaches
 
-1. Other feature extraction methods could be used such as MFCC features or Filter-Bank features.
+1. Other feature extraction methods could be used such as MFCC features or Filter-Bank features. It's also a common practice to take the 1st and 2nd discrete derivative to enrich the features.
 2. Other data sources could be used, for example .
