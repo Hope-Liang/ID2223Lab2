@@ -8,8 +8,9 @@ In this project, the goal is to fine-tune a pre-trained transformer model (Whisp
 
 ## Whisper
 
-The pretrained model we used in the lab is [Whisper](https://huggingface.co/blog/fine-tune-whisper) and a modified version by Professor Jim Dowling from his [github repo](https://github.com/ID2223KTH/id2223kth.github.io/tree/master/assignments/lab2) to fine-tune on Swedish language.
+The pretrained model we used in the lab is from [Whisper](https://huggingface.co/blog/fine-tune-whisper) and a modified version by Professor Jim Dowling from his [github repo](https://github.com/ID2223KTH/id2223kth.github.io/tree/master/assignments/lab2) to fine-tune on Swedish language.
 
+Whisper is a multilingual pre-trained model for Automatic Speech Recognition (ASR) task that can be applied to over 96 languages. It has a Transformer-based encoder-decoder architecture that does sequence-to-sequence mapping from spectogram features to text tokens. The model veries in sizes such as number of layers and we selected the small-sized model with 244M parameters to fine-tune on in this lab.
 
 
 ## Feature Pipeline
