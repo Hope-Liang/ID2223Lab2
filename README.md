@@ -45,6 +45,10 @@ Although we achieved 19.89% WER with our current design, there are still many wa
 
 ### Model-centric Approaches
 
+For model-centric approaches, we can 
+1. Use larger model with more layers, larger width and more heads, e.g. using whisper-medium or whisper-large. But in this case it would require much more training time as the number of parameters to be optimized has increased a lot.
+2. 
+
 
 ### Data-centric Approaches
 
