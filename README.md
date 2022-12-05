@@ -3,7 +3,7 @@ Authors: (GROUP 31) Khalid El Yaacoub, Xinyu Liang
 
 ## Introduction
 
-In this project, the goal is to fine-tune a pre-trained transformer model for Swedish language translation and 
+In this project, the goal is to fine-tune a pre-trained transformer model (Whisper) for Swedish language translation, refactor it into a feature pipeline and a training pipeline and build a serverless UI for using the fine-tuned model. The code are designed to run on Google Colab for feature extraction and training, and Huggingface for UI.
 
 
 
