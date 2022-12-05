@@ -48,7 +48,7 @@ Although we achieved 19.89% WER with our current design, there are still many wa
 For model-centric approaches, we can 
 
 1. Use larger model with more layers, larger width and more heads, e.g. using whisper-medium or whisper-large. But in this case it would require much more training time as the number of parameters to be optimized has increased a lot.
-2. The hyperparameters for training could be fine-tuned through random search/grid search or even applying other methods like Genetic Algorithms. The hyperparameters to be played around includes batch_size, learning_rate and dropout etc.
+2. The hyperparameters for training could be fine-tuned through random search/grid search or even applying other methods like Genetic Algorithms. The hyperparameters to be optimized include batch_size, learning_rate and dropout etc.
 
 
 ### Data-centric Approaches
