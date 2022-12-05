@@ -3,8 +3,7 @@ Authors: (GROUP 31) Khalid El Yaacoub, Xinyu Liang
 
 ## Introduction
 
-In this project, the goal is to fine-tune a pre-trained transformer model (Whisper) for Swedish language translation, refactor it into a feature pipeline and a training pipeline and build a serverless UI for using the fine-tuned model. The code are designed to run on Google Colab for feature extraction and training, and Huggingface for UI.
-
+In this project, the goal is to fine-tune a pre-trained transformer model (Whisper) for Swedish language translation, refactor it into a feature pipeline and a training pipeline and build a serverless UI for using the fine-tuned model. The pipeline structure uses Hopsworks/Google Drive/KTH OneDrive as feature store, Google Drive/Hugging face as model store and Hugging face as interactive UI to build applications. The interactive UI takes user's speech record as input and prints the recognized spoken sentence.
 
 
 ## Whisper
