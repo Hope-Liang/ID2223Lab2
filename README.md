@@ -49,8 +49,10 @@ For model-centric approaches, we can
 
 1. Use larger model with more layers, larger width and more heads, e.g. using whisper-medium or whisper-large. But in this case it would require much more training time as the number of parameters to be optimized has increased a lot.
 2. The hyperparameters for training could be fine-tuned through random search/grid search or even applying other methods like Genetic Algorithms. The hyperparameters to be optimized include batch_size, learning_rate and dropout etc.
+3. Other loss functions could be used, but whether the performance will be increased cannot be guaranteed.
 
 
 ### Data-centric Approaches
 
-1. 
+1. Other feature extraction methods could be used such as MFCC features or Filter-Bank features.
+2. Other data sources could be used, for example .
