@@ -8,7 +8,7 @@ In this project, the goal is to fine-tune a pre-trained transformer model (Whisp
 
 ## Whisper
 
-
+The pretrained model we used in the lab is [Whisper](https://huggingface.co/blog/fine-tune-whisper) and a modified version by Professor Jim Dowling from his [github repo](https://github.com/ID2223KTH/id2223kth.github.io/tree/master/assignments/lab2) to fine-tune on Swedish language.
 
 
 
