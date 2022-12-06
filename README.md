@@ -3,7 +3,7 @@ Authors: (GROUP 31) Khalid El Yaacoub, Xinyu Liang
 
 ## Introduction
 
-In this project, the goal is to fine-tune a pre-trained transformer model (Whisper) for Swedish language translation, refactor it into a feature pipeline and a training pipeline and build a serverless UI for using the fine-tuned model. The pipeline structure uses Hopsworks/Google Drive/KTH OneDrive as feature store, Google Drive/Hugging face as model store and Hugging face as interactive UI to build applications. The interactive UI takes user's speech record as input and prints the recognized spoken sentence.
+In this project, the goal is to fine-tune a pre-trained transformer model (Whisper) for Swedish language translation, refactor it into a feature pipeline and a training pipeline and build a serverless UI for using the fine-tuned model. The pipeline structure uses Hopsworks/Google Drive/KTH OneDrive as feature store, Google Drive/Hugging face as model store and Hugging face as interactive UI to build applications. The interactive UI takes user's speech record as input and prints the recognized spoken sentence. Besides we also uitlized Swedish-GPT to continue generating texts from the recognized sentence until a maximum length of 50.
 
 
 ## Whisper
@@ -32,6 +32,8 @@ The data is then processed to replace padded labels with -100 to ignore the loss
 ## Interactive UI
 
 With the trained model, we uploaded it to [Hugging face Model](https://huggingface.co/khalidey/ID2223_Lab2_Whisper_SV/tree/main) and created a [Hugging face interactive UI](https://huggingface.co/spaces/khalidey/ID2223-Lab2-Whisper). The application design is available in [huggingface-spaces-whisper/app.py](https://huggingface.co/spaces/khalidey/ID2223-Lab2-Whisper/blob/main/app.py). Users can click on the Record from microphone button to start speaking in Swedish, and click on Stop recording when finished speaking. After clicking on Submit for around 12 seconds, the spoken words will be shown on the output box to the right.
+
+We then added a new function that utilizes [GPT2](https://huggingface.co/tasks/text-generation), which is also a transformer-based model that automatically generates texts in the given context. We used a fine-tuned model [Swedish-GPT](https://huggingface.co/birgermoell/swedish-gpt) working with Swedish language and it will keeps generating text after the recognized ones for a maximum length of 50. 
 
 
 ## Link to App
