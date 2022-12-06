@@ -6,15 +6,18 @@ pipe2 = pipeline('text-generation', model='birgermoell/swedish-gpt')
 
 def transcribe(audio):
     text = pipe1(audio)["text"]
-    generated_text = pipe2(text, max_length = 50, num_return_sequences=2)[0]['generated_text']
+    generated_text = pipe2(text, max_length=50, num_return_sequences=2)[0]['generated_text']
     return text, generated_text
 
 iface = gr.Interface(
     fn=transcribe, 
     inputs=gr.Audio(source="microphone", type="filepath"), 
-    outputs=['text', 'text'],
+    outputs=[
+        gr.Textbox(label='Transcribed Speech'), 
+        gr.Textbox(label='Swedish GPT Generated Speech')
+    ],
     title="Whisper Small Swedish + Swedish GPT",
-    description="Realtime demo for Swedish speech recognition using a fine-tuned Whisper small model and text generation with Swedish GPT.",
+    description="Realtime demo for Swedish speech recognition using a fine-tuned Whisper small model & text generation with Swedish GPT.",
 )
 
 iface.launch()
