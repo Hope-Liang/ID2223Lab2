@@ -3,7 +3,7 @@ Authors: (GROUP 31) Khalid El Yaacoub, Xinyu Liang
 
 ## Introduction
 
-In this project, the goal is to fine-tune a pre-trained transformer model (Whisper) for Swedish language translation, refactor it into a feature pipeline and a training pipeline and build a serverless UI for using the fine-tuned model. The pipeline structure uses Hopsworks/Google Drive/KTH OneDrive as feature store, Google Drive/Hugging face as model store and Hugging face as interactive UI to build applications. The interactive UI takes user's speech record as input and prints the recognized spoken sentence. Besides we also uitlized Swedish-GPT to continue generating texts from the recognized sentence until a maximum length of 50.
+In this project, the goal is to fine-tune a pre-trained transformer model (Whisper) for Swedish language recognition, refactor it into a feature pipeline and a training pipeline and build a serverless UI for using the fine-tuned model. The pipeline structure uses Hopsworks/Google Drive/KTH OneDrive as feature store, Google Drive/Hugging face as model store and Hugging face as interactive UI to build applications. The interactive UI takes user's speech record as input and prints the recognized spoken sentence. Besides we also uitlized Swedish-GPT to continue generating texts from the recognized sentence until a maximum length of 50.
 
 
 ## Whisper
@@ -61,4 +61,4 @@ For data-centric approaches, we can have
 1. Other feature extraction methods could be used such as MFCC features or Filter-Bank features. It's also a common practice to take the 1st and 2nd discrete derivative to enrich the features.
 2. Other public-accessible data sources could be used, for example [NST Swedish Dictation](https://www.nb.no/sprakbanken/en/resource-catalogue/oai-nb-no-sbr-17/#resource-common-info) and its [reorgnized version](https://www.nb.no/sprakbanken/en/resource-catalogue/oai-nb-no-sbr-56/). 
 3. There are also paid data sources, for example [StageZero](https://stagezero.ai/transcription-speech-to-text-data/) or to generate voices from Swedish text and make new dataset with [Narakeet](https://www.narakeet.com/languages/swedish-text-to-speech/).
-4. Users can also provide there own speech data and have them collected to a feature store, and a new dataset could be made from it to update the model.
+4. Users can also provide their own speech data and have them collected to a feature store, and a new dataset could be made from it to update the model.
