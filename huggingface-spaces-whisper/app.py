@@ -6,7 +6,7 @@ pipe2 = pipeline('text-generation', model='birgermoell/swedish-gpt')
 
 def transcribe(audio):
     text = pipe1(audio)["text"]
-    generated_text = pipe2(text, max_length = 30, num_return_sequences=2)[0]['generated_text']
+    generated_text = pipe2(text, max_length = 50, num_return_sequences=2)[0]['generated_text']
     return text, generated_text
 
 iface = gr.Interface(
