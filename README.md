@@ -31,9 +31,13 @@ The data is then processed to replace padded labels with -100 to ignore the loss
 
 ## Interactive UI
 
-With the trained model, we uploaded it to [Hugging face Model](https://huggingface.co/khalidey/ID2223_Lab2_Whisper_SV/tree/main) and created a [Hugging face interactive UI](https://huggingface.co/spaces/khalidey/ID2223-Lab2-Whisper). The application design is available in [huggingface-spaces-whisper/app.py](https://huggingface.co/spaces/khalidey/ID2223-Lab2-Whisper/blob/main/app.py). Users can click on the Record from microphone button to start speaking in Swedish, and click on Stop recording when finished speaking. After clicking on Submit for around 12 seconds, the spoken words will be shown on the output box to the right.
+With the trained model, we uploaded it to [Hugging face Model](https://huggingface.co/khalidey/ID2223_Lab2_Whisper_SV/tree/main) and created a [Hugging face interactive UI](https://huggingface.co/spaces/HopeLiang/ID2223Lab2). The application design is available in [huggingface-spaces-whisper/app.py](https://huggingface.co/spaces/khalidey/ID2223-Lab2-Whisper/blob/main/app.py). 
+
+Our app supports both uploading from disk and record from microphone. Users can choose to upload a wav file from disk, or record from microphone, start speaking in Swedish and click on Stop recording when finished speaking.
 
 We then added a new function that utilizes [GPT2](https://huggingface.co/tasks/text-generation), which is also a transformer-based model that automatically generates texts in the given context. We used a fine-tuned model [Swedish-GPT](https://huggingface.co/birgermoell/swedish-gpt) working with Swedish language and it will keeps generating text after the recognized ones for a maximum length of 50. 
+
+After clicking on Submit for around 25 seconds, the spoken words, together with the generated text, will be shown on the output boxes.
 
 
 ## Link to App
