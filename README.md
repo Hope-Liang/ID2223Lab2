@@ -31,7 +31,7 @@ The data is then processed to replace padded labels with -100 to ignore the loss
 
 ## Interactive UI
 
-With the trained model, we uploaded it to [Hugging face Model](https://huggingface.co/khalidey/ID2223_Lab2_Whisper_SV/tree/main) and created a [Hugging face interactive UI](https://huggingface.co/spaces/HopeLiang/ID2223Lab2). The application design is available in [huggingface-spaces-whisper/app.py](https://huggingface.co/spaces/khalidey/ID2223-Lab2-Whisper/blob/main/app.py). 
+With the trained model, we uploaded it to [Hugging face Model](https://huggingface.co/khalidey/ID2223_Lab2_Whisper_SV/tree/main) and created a [Hugging face interactive UI](https://huggingface.co/spaces/HopeLiang/ID2223Lab2). The application design is available in [huggingface-spaces-whisper/app.py](https://huggingface.co/spaces/HopeLiang/ID2223Lab2/blob/main/app.py). 
 
 Our app supports both uploading from disk and record from microphone. Users can choose to upload a wav file from disk, or record from microphone, start speaking in Swedish and click on Stop recording when finished speaking.
 
@@ -42,7 +42,7 @@ After clicking on Submit for around 25 seconds, the spoken words, together with 
 
 ## Link to App
 
-The link to the Application webpage on Hugging Face is [Interactive UI](https://huggingface.co/spaces/khalidey/ID2223-Lab2-Whisper).
+The link to the Application webpage on Hugging Face is [Interactive UI](https://huggingface.co/spaces/HopeLiang/ID2223Lab2).
 
 
 ## How to Improve Model Performance
