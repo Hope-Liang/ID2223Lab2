@@ -31,7 +31,7 @@ The data is then processed to replace padded labels with -100 to ignore the loss
 
 ## Interactive UI
 
-With the trained model, we uploaded it to [Hugging face Model](https://huggingface.co/khalidey/ID2223_Lab2_Whisper_SV/tree/main) and created a [Hugging face interactive UI](https://huggingface.co/spaces/HopeLiang/ID2223Lab2). The application design is available in [huggingface-spaces-whisper/app.py](https://huggingface.co/spaces/HopeLiang/ID2223Lab2/blob/main/app.py). 
+With the trained model, we uploaded it to [Hugging face Model](https://huggingface.co/khalidey/ID2223_Lab2_Whisper_SV/tree/main) and created a [Hugging face interactive UI](https://huggingface.co/spaces/khalidey/ID2223-Lab2-Whisper). The application design is available in [huggingface-spaces-whisper/app.py](https://huggingface.co/spaces/khalidey/ID2223-Lab2-Whisper/blob/main/app.py). 
 
 Our app supports both uploading from disk and record from microphone. Users can choose to upload a wav file from disk, or record from microphone, start speaking in Swedish and click on Stop recording when finished speaking.
 
@@ -39,10 +39,12 @@ We then added a new function that utilizes [GPT2](https://huggingface.co/tasks/t
 
 After clicking on Submit for around 25 seconds, the spoken words, together with the generated text, will be shown on the output boxes.
 
+Our app is also capable of transcribing Youtube videos by giving a Youtube URL, it will output the recognized speech for the first 30 seconds. This would generally take longer time but the transcription accuracy is quite high.
+
 
 ## Link to App
 
-The link to the Application webpage on Hugging Face is [Interactive UI](https://huggingface.co/spaces/HopeLiang/ID2223Lab2).
+The link to the Application webpage on Hugging Face is [Interactive UI](https://huggingface.co/spaces/khalidey/ID2223-Lab2-Whisper).
 
 
 ## How to Improve Model Performance
